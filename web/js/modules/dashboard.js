@@ -157,7 +157,43 @@ App.modules.dashboard = {
     const box = document.getElementById('dash_normal');
     if (!d || !box) return;
     box.innerHTML = '';
-    // 在办焦点：当前处置中的事件 + 流程定位
+
+    // ===== 快速上手条（首次登录显示，可关闭）=====
+    const myNav = App.user.nav || [];
+    if (!localStorage.getItem('yj_welcome')) {
+      const steps = [
+        myNav.includes('report') ? { t: '① 一线上报', d: '上报事件情况，自动识别类型', go: () => App.go('report') } : null,
+        myNav.includes('dispatch') ? { t: '② 一键启动', d: '研判定级，多通道通知全员', go: () => App.go('dispatch') } : null,
+        myNav.includes('tasks') || myNav.includes('field') ? { t: '③ 执行任务', d: '确认通知、出动、现场表单', go: () => App.go(myNav.includes('tasks') ? 'tasks' : 'field') } : null,
+        myNav.includes('drill') ? { t: '④ 模拟演练', d: '单人走完应急处置全流程', go: () => App.go('drill') } : null
+      ].filter(Boolean);
+      if (steps.length) {
+        const wb = App.h('div', { class: 'welcome-bar' }, [
+          App.h('div', { class: 'wb-title' }, ['👋 欢迎使用卫盾Agent，快速了解你的工作流']),
+          App.h('div', { class: 'wb-steps' }, steps.map(s => App.h('button', { class: 'wb-step', onclick: s.go }, [App.h('b', {}, [s.t]), App.h('small', {}, [s.d])]))),
+          App.h('button', { class: 'wb-close', onclick: () => { localStorage.setItem('yj_welcome', '1'); wb.remove(); } }, ['✕ 知道了'])
+        ]);
+        box.appendChild(wb);
+      }
+    }
+
+    // ===== 我的待办 =====
+    const k = d.kpi;
+    const todos = [];
+    if (myNav.includes('report') && k.pendingReports) todos.push({ ico: '📨', t: `待研判上报 ${k.pendingReports} 条`, go: () => App.go('report') });
+    if (myNav.includes('response') && k.escalated) todos.push({ ico: '⏰', t: `通知超时升级 ${k.escalated} 起`, go: () => App.go('response') });
+    if (myNav.includes('routine') && k.routineLate) todos.push({ ico: '📅', t: `今日报告逾期 ${k.routineLate} 个事件`, go: () => App.go('routine') });
+    if (k.blockedTasks) todos.push({ ico: '⛔', t: `受阻任务 ${k.blockedTasks} 项`, go: () => App.go(myNav.includes('field') ? 'field' : 'tasks') });
+    if (d.pendingRequests && d.pendingRequests.length) todos.push({ ico: '📦', t: `待批资源申请 ${d.pendingRequests.length} 条`, go: () => App.go('field') });
+    if (todos.length) {
+      const tCard = App.h('div', { class: 'card todo-card', style: 'margin-bottom:12px' }, [
+        App.h('div', { class: 'section-title' }, [App.h('span', { class: 'bar' }), '我的待办']),
+        App.h('div', { class: 'todo-list' }, todos.map(t => App.h('button', { class: 'todo-item', onclick: t.go }, [App.h('span', {}, [t.ico]), t.t, App.h('span', { class: 'go' }, ['去处理 ->'])])))
+      ]);
+      box.appendChild(tCard);
+    }
+
+    // ===== 在办焦点：当前处置中的事件 + 流程定位 =====
     const focus = d.activeEvents[0];
     if (focus) {
       const focusCard = App.h('div', { class: 'card', style: 'margin-bottom:12px' }, [
@@ -173,7 +209,6 @@ App.modules.dashboard = {
       box.appendChild(focusCard);
     }
     // KPI
-    const k = d.kpi;
     box.appendChild(App.h('div', { class: 'kpi-row' }, [
       this.kpi('在办事件', k.active, 'info'), this.kpi('累计事件', k.totalEvents, ''),
       this.kpi('在治病例', k.activeCases, 'warn'), this.kpi('待研判', k.pendingReports, k.pendingReports ? 'danger' : 'ok'),
@@ -188,12 +223,22 @@ App.modules.dashboard = {
     const tyCard = App.h('div', { class: 'card chart-card' }, [App.h('div', { class: 'section-title' }, [App.h('span', { class: 'bar' }), '事件类型分布']), App.h('div', { id: 'n_types', style: 'height:200px;display:flex;align-items:center;justify-content:center' })]);
     grid.appendChild(tCard); grid.appendChild(tyCard);
     box.appendChild(grid);
-    if (ov) Charts.line(document.getElementById('n_trend'), { labels: ov.trend.map(t => t.date), series: [{ name: '事件', data: ov.trend.map(t => t.events) }, { name: '病例', data: ov.trend.map(t => t.cases) }], showValues: true });
-    if (types) Charts.pie(document.getElementById('n_types'), { data: types });
+    if (ov && ov.trend && ov.trend.length) Charts.line(document.getElementById('n_trend'), { labels: ov.trend.map(t => t.date), series: [{ name: '事件', data: ov.trend.map(t => t.events) }, { name: '病例', data: ov.trend.map(t => t.cases) }], showValues: true });
+    else tCard.appendChild(App.h('div', { class: 'empty', style: 'padding:10px' }, ['暂无统计数据']));
+    if (types && types.length) Charts.pie(document.getElementById('n_types'), { data: types });
+    else tyCard.appendChild(App.h('div', { class: 'empty', style: 'padding:10px' }, ['暂无事件数据']));
     // 在办事件列表
     const active = d.activeEvents || [];
     const eCard = App.h('div', { class: 'card', style: 'margin-top:12px' }, [App.h('div', { class: 'section-title' }, [App.h('span', { class: 'bar' }), `在办事件 (${active.length})`])]);
-    if (!active.length) eCard.appendChild(App.h('div', { class: 'empty' }, ['当前无在办事件，系统处于常态监测']));
+    if (!active.length) {
+      eCard.appendChild(App.h('div', { class: 'empty' }, ['当前无在办事件，系统处于常态监测']));
+      const cta = App.h('div', { class: 'empty-cta' }, [
+        myNav.includes('report') ? App.h('button', { class: 'primary', onclick: () => App.go('report') }, ['📨 去上报事件']) : null,
+        myNav.includes('drill') ? App.h('button', { onclick: () => App.go('drill') }, ['🎬 或进入演练模式体验']) : null,
+        myNav.includes('dispatch') ? App.h('button', { onclick: () => App.go('dispatch') }, ['🚨 直接一键启动']) : null
+      ].filter(Boolean));
+      if (cta.childNodes.length) eCard.appendChild(cta);
+    }
     else active.forEach(e => eCard.appendChild(App.h('div', { class: 'flex between items', style: 'padding:8px 0;border-bottom:1px dashed var(--line);cursor:pointer', onclick: () => this.eventDetail(e.id) }, [
       App.h('div', {}, [App.h('b', {}, [(e.typeIcon || '') + ' ' + e.title]), App.h('div', { class: 'muted' }, [e.location + ' · ' + App.fmt(e.createdAt)])]),
       App.tag(e.stageName, 'info')
@@ -279,15 +324,21 @@ App.modules.dashboard = {
       Charts.bar(document.getElementById('ct_sla'), { data: [{ name: '启动', value: s.avgLaunchH }, { name: '到场', value: s.avgToFieldH }, { name: '处置', value: s.avgTotalH }] });
     }
 
-    // 右栏：环形组（关键指标达成）
+    // 右栏：环形组（关键指标达成 —— 真实统计）
     const rings = document.getElementById('ct_rings');
     if (rings) {
       rings.innerHTML = '';
-      const taskDoneRate = k.blockedTasks === 0 && d.activeEvents.length ? 100 : (d.activeEvents.length ? 70 : 100);
-      const reportRate = k.routineLate === 0 ? 100 : 60;
-      const ackRate = k.escalated === 0 ? 100 : 80;
+      // 任务顺畅：全部事件任务完成率
+      const evStats = (d.activeEvents || []).map(e => ({ done: e.taskDone || 0, total: e.taskTotal || 0 }));
+      const taskTotal = evStats.reduce((s, e) => s + e.total, 0);
+      const taskDone = evStats.reduce((s, e) => s + e.done, 0);
+      const taskRate = taskTotal ? Math.round(taskDone / taskTotal * 100) : 100;
+      // 报告合规：逾期为0则100，否则按逾期占比折减
+      const reportRate = k.routineLate === 0 ? 100 : Math.max(50, 100 - k.routineLate * 20);
+      // 反馈及时：通知确认率
+      const ackRate = d.notifTotal ? Math.round(d.notifAcked / d.notifTotal * 100) : 100;
       const items = [
-        { v: taskDoneRate, l: '任务顺畅', c: '#34d399' },
+        { v: taskRate, l: '任务顺畅', c: '#34d399' },
         { v: reportRate, l: '报告合规', c: '#3b82f6' },
         { v: ackRate, l: '反馈及时', c: '#22d3ee' },
         { v: res ? (res.summary.bedTotal ? 100 - Math.round(res.summary.bedOccupied / res.summary.bedTotal * 100) : 100) : 100, l: '床位余量', c: '#a78bfa' }

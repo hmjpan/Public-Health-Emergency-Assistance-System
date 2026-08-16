@@ -45,10 +45,11 @@ App.modules.tasks = {
     }
 
     const statMap = { pending: '待执行', doing: '执行中', done: '已完成', blocked: '受阻' };
+    const isLeader = ['commander', 'deputy'].includes(App.user.role);
     let has = false;
     for (const e of active) {
       const tasks = await App.api.get('/field/' + e.id + '/tasks');
-      const mine = (tasks || []).filter(t => t.group === App.user.group);
+      const mine = isLeader ? (tasks || []) : (tasks || []).filter(t => t.group === App.user.group);
       if (!mine.length) continue;
       has = true;
       myCard.appendChild(App.h('div', { class: 'muted2', style: 'margin:10px 0 4px;font-weight:600' }, [`${e.typeIcon || ''} ${e.title}`]));

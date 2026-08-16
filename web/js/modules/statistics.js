@@ -72,8 +72,8 @@ App.modules.statistics = {
     g3.appendChild(this.chartCard('医院床位/ICU占用率', 'st_hosprate', 260));
     page.appendChild(g3);
     if (res) {
-      const data = res.hospRate.flatMap(h => [{ name: h.name + '床位', value: h.bedRate }, { name: h.name + 'ICU', value: h.icuRate }]);
-      Charts.hbar(document.getElementById('st_hosprate'), { data: res.hospRate.map(h => ({ name: h.name, value: h.bedRate })), max: 100 });
+      // 床位+ICU 双指标水平条
+      Charts.hbar(document.getElementById('st_hosprate'), { data: res.hospRate.flatMap(h => [{ name: h.name + '·床', value: h.bedRate }, { name: h.name + '·ICU', value: h.icuRate }]), max: 100 });
     }
 
     // 第四行：报告合规率 + 资源汇总

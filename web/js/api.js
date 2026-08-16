@@ -38,11 +38,14 @@ App.h = function (tag, props, children) {
       if (k === 'class') el.className = props[k];
       else if (k === 'html') el.innerHTML = props[k];
       else if (k.startsWith('on')) el.addEventListener(k.slice(2), props[k]);
+      else if (k === 'disabled' || k === 'selected' || k === 'checked') { if (props[k] === '' || props[k] === true) el.setAttribute(k, ''); }
+      else if (props[k] == null) { /* null/undefined 不写属性 */ }
       else el.setAttribute(k, props[k]);
     }
   }
   (children || []).forEach(c => {
     if (c == null || c === false) return;
+    if (Array.isArray(c)) { c.forEach(cc => { if (cc != null && cc !== false) el.appendChild(typeof cc === 'string' ? document.createTextNode(cc) : cc); }); return; }
     el.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
   });
   return el;

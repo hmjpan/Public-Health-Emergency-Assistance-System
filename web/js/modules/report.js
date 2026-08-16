@@ -31,6 +31,7 @@ App.modules.report = {
     const mine = (list || []).filter(r => r.reporter === App.user.name || App.user.role === 'commander' || App.user.role === 'info');
     if (!mine.length) listCard.appendChild(App.h('div', { class: 'empty' }, ['暂无上报记录']));
     else {
+      const canLaunch = ['commander', 'deputy'].includes(App.user.role);
       mine.forEach(r => {
         const stMap = { pending: ['待研判', 'warn'], adopted: ['已采纳', 'ok'], rejected: ['已排除', ''] };
         const s = stMap[r.status] || [r.status, ''];
@@ -39,7 +40,10 @@ App.modules.report = {
             App.h('div', {}, [App.esc(r.situation), ' ', App.tag(r.typeName || '', 'info')]),
             App.h('div', { class: 'muted' }, [`${r.location} · ${r.scale || '-'} · ${App.fmt(r.createdAt)}`])
           ]),
-          App.tag(s[0], s[1])
+          App.h('div', { class: 'flex gap items' }, [
+            canLaunch && r.status === 'pending' ? App.h('button', { class: 'primary', style: 'padding:3px 10px;font-size:12px', onclick: () => App.go('dispatch', { reportId: r.id }) }, ['研判启动 ->']) : null,
+            App.tag(s[0], s[1])
+          ])
         ]));
       });
     }

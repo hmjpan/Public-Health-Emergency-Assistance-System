@@ -9,17 +9,24 @@ App.modules.review = {
     const events = await App.api.get('/dispatch/events');
     const closed = (events || []).filter(e => e.status === 'closed');
     const active = (events || []).filter(e => e.status !== 'closed');
+    const canReview = ['commander', 'deputy', 'reviewer'].includes(App.user.role);
 
     // 待复盘事件（已终止但未复盘）
     const todoCard = App.h('div', { class: 'card' }, [
       App.h('div', { class: 'section-title' }, [App.h('span', { class: 'bar' }), '待复盘事件（已终止）'])
     ]);
-    if (!closed.length) todoCard.appendChild(App.h('div', { class: 'empty' }, ['暂无已终止事件']));
+    if (!closed.length) {
+      todoCard.appendChild(App.h('div', { class: 'empty' }, ['暂无已终止事件']));
+      todoCard.appendChild(App.h('div', { class: 'empty-cta' }, [
+        active.length ? App.h('button', { class: 'primary', onclick: () => App.go('response', { eventId: active[0].id }) }, ['🚨 当前有处置中的事件']) : null,
+        App.h('button', { onclick: () => App.go('drill') }, ['🎬 或进入演练模式'])
+      ].filter(Boolean)));
+    }
     else {
       closed.forEach(e => {
         todoCard.appendChild(App.h('div', { class: 'flex between items', style: 'padding:9px 0;border-bottom:1px dashed var(--line)' }, [
           App.h('div', {}, [App.h('b', {}, [(e.typeIcon || '') + ' ' + e.title]), App.h('div', { class: 'muted' }, [`${e.location} · 终止 ${App.fmt(e.closedAt)}`])]),
-          e.reviewed ? App.tag('已复盘', 'ok') : App.h('button', { class: 'primary', onclick: () => this.initReview(e.id, e.title) }, ['发起复盘'])
+          e.reviewed ? App.tag('已复盘', 'ok') : canReview ? App.h('button', { class: 'primary', onclick: () => this.initReview(e.id, e.title) }, ['发起复盘']) : App.tag('待复盘', 'warn')
         ]));
       });
     }

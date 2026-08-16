@@ -8,10 +8,18 @@ App.modules.response = {
 
     const events = await App.api.get('/dispatch/events');
     const active = (events || []).filter(e => e.status !== 'closed');
-    if (!active.length) { page.appendChild(App.h('div', { class: 'empty' }, ['当前无在办事件'])); return; }
+    if (!active.length) {
+      page.appendChild(App.h('div', { class: 'empty' }, ['当前无在办事件']));
+      page.appendChild(App.h('div', { class: 'empty-cta' }, [
+        ['commander', 'deputy'].includes(App.user.role) ? App.h('button', { class: 'primary', onclick: () => App.go('dispatch') }, ['🚨 去一键启动']) : null,
+        App.h('button', { onclick: () => App.go('drill') }, ['🎬 或进入演练模式'])
+      ].filter(Boolean)));
+      return;
+    }
 
     const eventId = params.eventId || active[0].id;
     const e = active.find(x => x.id === eventId) || active[0];
+    this._ev = e.id; // 记录当前事件，操作后刷新保持在原事件
 
     // 流程定位：当前环节（响应启动/现场处置/终止复盘）
     page.appendChild(App.stepper(e.stage));
@@ -43,11 +51,15 @@ App.modules.response = {
         App.h('div', { class: 'chip' }, [App.h('span', { class: 'dot ' + (i.ok ? 'g' : 'r') }), i.t])
       )));
       if (['commander', 'deputy'].includes(App.user.role)) {
+        const blocked = [];
+        if (!chk.groupsReady) blocked.push('小组未全部出动');
+        if (!chk.materialsReady) blocked.push('物资未全部装车');
+        if (!chk.vehiclesReady) blocked.push('车辆未全部到位');
         c.appendChild(App.h('button', {
           class: chk.allReady ? 'success' : '', disabled: chk.allReady ? null : '',
           style: 'margin-top:10px',
           onclick: () => this.finishLaunch(e.id)
-        }, [chk.allReady ? '✓ 确认启动阶段完成 → 进入现场处置' : '完成标准未达成,暂不可推进']));
+        }, [chk.allReady ? '✓ 确认启动阶段完成 → 进入现场处置' : '未达成: ' + (blocked.join('、') || '待各小组确认')]));
       }
       page.appendChild(c);
     }
@@ -124,7 +136,7 @@ App.modules.response = {
 
   async confirm(id, mode) {
     const r = await App.api.post('/response/personnel/' + id + '/confirm', { mode });
-    if (r) { App.toast('已更新'); this.render(document.getElementById('content'), {}); }
+    if (r) { App.toast('已更新'); this.render(document.getElementById('content'), { eventId: this._ev }); }
   },
 
   depart(p) {
@@ -145,13 +157,13 @@ App.modules.response = {
         equipmentOk: document.getElementById('dp_equip').checked
       });
       if (!r) return false;
-      App.toast('已出发'); this.render(document.getElementById('content'), {});
+      App.toast('已出发'); this.render(document.getElementById('content'), { eventId: this._ev });
     }, '确认出发');
   },
 
   async arrive(id) {
     const r = await App.api.post('/response/personnel/' + id + '/arrive');
-    if (r) { App.toast('已抵达'); this.render(document.getElementById('content'), {}); }
+    if (r) { App.toast('已抵达'); this.render(document.getElementById('content'), { eventId: this._ev }); }
   },
 
   vehicleReady(id) {
@@ -170,7 +182,7 @@ App.modules.response = {
         needPass: document.getElementById('vh_pass').checked
       });
       if (!r) return false;
-      App.toast('已就位'); this.render(document.getElementById('content'), {});
+      App.toast('已就位'); this.render(document.getElementById('content'), { eventId: this._ev });
     }, '确认就位');
   },
 

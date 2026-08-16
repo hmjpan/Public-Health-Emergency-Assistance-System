@@ -1,6 +1,7 @@
 // App Shell: 登录态、角色导航、模块路由
 const MODULE_META = {
   dashboard: { title: '指挥大屏', ico: '🖥️', tag: '处置协同' },
+  map: { title: '态势地图', ico: '🗺️', tag: '处置协同' },
   statistics: { title: '统计报表', ico: '📊', tag: '运营管理' },
   dispatch: { title: '一键启动', ico: '🚨', tag: '事件入口' },
   response: { title: '出动状态', ico: '🚑', tag: '处置协同' },
@@ -21,7 +22,7 @@ const MODULE_META = {
 // 导航分组：按应急工作流组织，让使用者明确"当前在哪一环"
 const NAV_GROUPS = [
   { label: '事件入口', ico: '📥', items: ['report', 'dispatch'] },
-  { label: '处置协同', ico: '🚨', items: ['dashboard', 'response', 'field', 'materials', 'medical', 'contacts'] },
+  { label: '处置协同', ico: '🚨', items: ['dashboard', 'map', 'response', 'field', 'materials', 'medical', 'contacts'] },
   { label: '信息闭环', ico: '🔄', items: ['routine', 'tasks', 'publishing', 'review'] },
   { label: '运营管理', ico: '🧭', items: ['drill', 'statistics', 'agent', 'admin'] }
 ];
@@ -43,17 +44,44 @@ App.stepper = function (stage, opts) {
 App.renderLogin = function () {
   const root = document.getElementById('root');
   root.innerHTML = '';
+  // 左侧品牌区：产品定位 + 多Agent协同示意
+  const hero = App.h('div', { class: 'login-hero' }, [
+    App.h('div', { class: 'hero-kicker' }, ['GOAI · 新智基座 Agent Infra 参赛作品']),
+    App.h('h1', {}, ['卫盾 Agent']),
+    App.h('div', { class: 'hero-sub' }, ['面向突发公共卫生事件的多 Agent 协同应急处置平台。',
+      '7 个职能 Agent 按"指挥决策 / 现场处置 / 保障协调"三组协同，12 个 Skill 沉淀为可复用能力，',
+      '覆盖从接报研判、一键启动、现场处置到复盘整改的端到端闭环。']),
+    App.h('div', { class: 'hero-feats' }, [
+      App.h('span', { class: 'hero-chip' }, ['🤖 7 Agent 三组协同']),
+      App.h('span', { class: 'hero-chip' }, ['🧩 12 Skill · D0/D1/D2']),
+      App.h('span', { class: 'hero-chip' }, ['⚙️ 规则引擎 · 法规溯源']),
+      App.h('span', { class: 'hero-chip' }, ['🔗 全链路 Trace 可观测'])
+    ]),
+    App.h('div', { class: 'login-arch' }, [
+      App.h('div', { class: 'la-title' }, ['— 多 AGENT 协同链路 —']),
+      App.h('div', { class: 'la-flow' }, [
+        App.h('div', { class: 'la-row' }, [
+          App.h('div', { class: 'la-node' }, [App.h('b', {}, ['📨 事件上报']), App.h('small', {}, ['电话/直报/舆情'])]),
+          App.h('div', { class: 'la-arrow' }, ['→']),
+          App.h('div', { class: 'la-node hl' }, [App.h('b', {}, ['🛰️ 哨兵研判']), App.h('small', {}, ['EventClassify 分类'])]),
+          App.h('div', { class: 'la-arrow' }, ['→']),
+          App.h('div', { class: 'la-node hl' }, [App.h('b', {}, ['🎯 指挥决策']), App.h('small', {}, ['定级·SLA·编成'])])
+        ]),
+        App.h('div', { class: 'la-connector' }, ['↓']),
+        App.h('div', { class: 'la-row' }, [
+          App.h('div', { class: 'la-node' }, [App.h('b', {}, ['🏕️ 现场处置']), App.h('small', {}, ['SOP·物资·病例'])]),
+          App.h('div', { class: 'la-node' }, [App.h('b', {}, ['📦 调度保障']), App.h('small', {}, ['人员·车辆·通讯'])]),
+          App.h('div', { class: 'la-node' }, [App.h('b', {}, ['📋 复盘沉淀']), App.h('small', {}, ['报告·整改·知识'])])
+        ])
+      ])
+    ])
+  ]);
+  // 右侧登录卡：账号密码 + 演示账号快选
   const card = App.h('div', { class: 'login-card' }, [
     App.h('div', { class: 'login-brand' }, [
       App.h('div', { class: 'logo' }, ['🛡️']),
-      App.h('h1', {}, ['卫盾Agent']),
-      App.h('div', { class: 'sub' }, ['突发公共卫生事件多Agent协同应急处置平台'])
-    ]),
-    App.h('div', { class: 'login-feats' }, [
-      App.h('span', { class: 'chip' }, ['🤖 7 Agent']),
-      App.h('span', { class: 'chip' }, ['🧩 12 Skill']),
-      App.h('span', { class: 'chip' }, ['⚙️ 规则引擎']),
-      App.h('span', { class: 'chip' }, ['🔁 强制反馈'])
+      App.h('h2', {}, ['登录']),
+      App.h('div', { class: 'sub' }, ['多Agent协同应急处置平台'])
     ]),
     App.h('div', { class: 'field' }, [
       App.h('label', { htmlFor: 'u' }, ['账号']),
@@ -65,9 +93,19 @@ App.renderLogin = function () {
     ]),
     App.h('div', { class: 'err', id: 'err' }),
     App.h('button', { class: 'primary', style: 'width:100%', onclick: doLogin }, ['登 录']),
-    App.h('div', { class: 'login-tip' }, ['演示账号: commander / liudiao / wuzi / siji / medic ... 密码均 123456'])
+    App.h('div', { class: 'quick-accounts' }, [
+      App.h('div', { class: 'qa-label' }, ['— 演示账号一键填入（密码均 123456）—']),
+      App.h('div', { class: 'qa-grid' }, [
+        ['commander', '指挥长'], ['liudiao', '流调组长'], ['medic', '医疗救治员'],
+        ['wuzi', '物资管理员'], ['spokesman', '宣教发言人'], ['reviewer', '复盘评估员']
+      ].map(([u, n]) => App.h('div', { class: 'qa-item', onclick: () => {
+        document.getElementById('u').value = u;
+        document.getElementById('p').value = '123456';
+        document.getElementById('u').focus();
+      } }, [App.h('b', {}, [u]), App.h('small', {}, [n])])))
+    ])
   ]);
-  root.appendChild(App.h('div', { class: 'login-wrap' }, [card]));
+  root.appendChild(App.h('div', { class: 'login-wrap' }, [hero, App.h('div', { class: 'login-right' }, [card])]));
   document.getElementById('u').focus();
 };
 

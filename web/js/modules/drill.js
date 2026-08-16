@@ -131,7 +131,7 @@ App.modules.drill = {
       App.h('div', { class: 'hint', style: 'color:var(--amber)' }, ['⚠ 演练事件标记 isDrill，不计入正式统计；通知将真实发送给通讯录人员'])
     ]), async () => {
       const r = await App.api.post('/drill/start', { scriptId: s.id, title: title.value.trim(), location: location.value.trim(), level: level.value });
-      if (r) { App.toast(`演练已启动!通知${r.data.event ? '' : ''}人,注入点${r.data.session.injectCount}个`); App.go('drill', { tab: 'sessions' }); }
+      if (r) { App.toast(`演练已启动!通知${r.notified || 0}人,注入点${r.session.injectCount}个`); App.go('drill', { tab: 'sessions' }); }
     }, '启动演练');
   },
 

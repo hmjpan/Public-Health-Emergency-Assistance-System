@@ -127,10 +127,16 @@ App.modules.advisor = {
   },
 
   async showKnowledge(id) {
-    const r = await App.api.get('/rules/plan-match?typeKey=&level=IV级');
-    // 简化：直接从知识匹配结果里找；提供详情弹窗
-    const k = r && r.results ? null : null;
-    App.toast('知识详情：' + id + '（完整内容见知识库模块）');
+    const list = await App.api.get('/review/knowledge/list');
+    const k = (list || []).find(x => x.id === id);
+    if (!k) { App.toast('未找到该知识条目'); return; }
+    App.modal(k.title, App.h('div', {}, [
+      App.h('div', { class: 'flex gap wrap', style: 'margin-bottom:8px' }, [
+        App.tag({ plan: '预案', sop: 'SOP', measure: '措施', case: '案例' }[k.type] || k.type, 'info'),
+        k.typeKey ? App.tag('适用: ' + k.typeKey, 'warn') : null
+      ].filter(Boolean)),
+      App.h('div', { style: 'white-space:pre-wrap;font-size:13px;line-height:1.8;color:var(--txt2)' }, [k.content || k.title])
+    ]), () => true, '关闭');
   },
 
   async showQuickRef() {

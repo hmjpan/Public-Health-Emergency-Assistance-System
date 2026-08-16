@@ -58,7 +58,8 @@ App.modules.admin = {
   addUser() {
     const un = App.h('input', { id: 'au_un', placeholder: '登录账号' });
     const nm = App.h('input', { id: 'au_nm', placeholder: '姓名' });
-    const role = App.h('select', { id: 'au_role' }, ['commander', 'deputy', 'group_leader', 'member', 'material_mgr', 'driver', 'info', 'admin'].map(r => App.h('option', { value: r }, [r])));
+    const roleOpts = { commander: '指挥长', deputy: '副指挥', group_leader: '组长', member: '队员', material_mgr: '物资管理员', medic: '医疗救治员', spokesman: '宣教发言人', reviewer: '复盘评估员', drill_mgr: '演练管理员', driver: '驾驶员', info: '信息员', admin: '平台管理员' };
+    const role = App.h('select', { id: 'au_role' }, Object.keys(roleOpts).map(r => App.h('option', { value: r }, [roleOpts[r]])));
     const grp = App.h('input', { id: 'au_grp', placeholder: '所属小组' });
     App.modal('新增账号', App.h('div', {}, [
       App.h('div', { class: 'field' }, [App.h('label', {}, ['账号']), un]),

@@ -36,7 +36,12 @@ App.modules.publishing = {
     const lCard = App.h('div', { class: 'card', style: 'margin-top:12px' }, [
       App.h('div', { class: 'section-title' }, [App.h('span', { class: 'bar' }), `发布稿列表 (${(pub || []).length})`])
     ]);
-    if (!pub || !pub.length) lCard.appendChild(App.h('div', { class: 'empty' }, ['暂无发布稿']));
+    if (!pub || !pub.length) {
+      lCard.appendChild(App.h('div', { class: 'empty' }, ['暂无发布稿']));
+      lCard.appendChild(App.h('div', { class: 'empty-cta' }, [
+        canWrite ? App.h('button', { class: 'primary', onclick: () => this.draft() }, ['📝 起草第一篇']) : null
+      ].filter(Boolean)));
+    }
     else {
       const stMap = { draft: ['草稿', ''], pending: ['待审批', 'warn'], approved: ['已审批', 'info'], published: ['已发布', 'ok'] };
       pub.forEach(p => {
@@ -48,7 +53,8 @@ App.modules.publishing = {
               canWrite && p.status === 'draft' ? App.h('button', { class: 'primary', style: 'padding:3px 10px;font-size:12px', onclick: () => this.submit(p.id) }, ['提交审批']) : null,
               isCmd && p.status === 'pending' ? App.h('button', { class: 'success', style: 'padding:3px 10px;font-size:12px', onclick: () => this.approve(p.id) }, ['批准']) : null,
               isCmd && p.status === 'pending' ? App.h('button', { class: 'danger', style: 'padding:3px 10px;font-size:12px', onclick: () => this.approve(p.id, true) }, ['退回']) : null,
-              canWrite && p.status === 'approved' ? App.h('button', { class: 'primary', style: 'padding:3px 10px;font-size:12px', onclick: () => this.publish(p.id) }, ['发布']) : null
+              canWrite && p.status === 'approved' ? App.h('button', { class: 'primary', style: 'padding:3px 10px;font-size:12px', onclick: () => this.publish(p.id) }, ['发布']) : null,
+              App.h('button', { style: 'padding:3px 10px;font-size:12px', onclick: () => this.viewPub(p) }, ['查看全文'])
             ].filter(Boolean))
           ]),
           App.h('div', { class: 'muted', style: 'margin:4px 0' }, [p.content.slice(0, 60) + (p.content.length > 60 ? '...' : '')]),
@@ -57,6 +63,13 @@ App.modules.publishing = {
       });
     }
     body.appendChild(lCard);
+  },
+
+  viewPub(p) {
+    App.modal(p.title, App.h('div', {}, [
+      App.h('div', { class: 'flex gap wrap', style: 'margin-bottom:10px' }, [App.tag(p.channel, 'info')]),
+      App.h('pre', { style: 'white-space:pre-wrap;font-family:inherit;font-size:13px;color:var(--txt);line-height:1.7;margin:0' }, [p.content])
+    ]), () => true, '关闭');
   },
 
   async draft() {

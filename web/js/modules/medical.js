@@ -218,7 +218,7 @@ App.modules.medical = {
     // 汇总 KPI
     body.appendChild(App.h('div', { class: 'kpi-row' }, [
       this.kpi('定点机构', s.count, '', '🏥'),
-      this.kpi('床位 可用/总', `${s.bedAvail}/${s.bedTotal}`, s.bedAvail / s.bedTotal < 0.15 ? 'danger' : 'ok', '🛏️'),
+      this.kpi('床位 可用/总', `${s.bedAvail}/${s.bedTotal}`, s.bedTotal > 0 && s.bedAvail / s.bedTotal < 0.15 ? 'danger' : 'ok', '🛏️'),
       this.kpi('ICU 可用/总', `${s.icuAvail}/${s.icuTotal}`, s.icuAvail === 0 ? 'danger' : 'warn', '💓'),
       this.kpi('在岗医护', s.staffOnDuty, 'info', '👨‍⚕️'),
       this.kpi('可支援医护', s.staffAvailable, 'ok', '🚑'),

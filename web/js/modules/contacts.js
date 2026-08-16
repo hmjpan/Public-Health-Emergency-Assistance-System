@@ -1,7 +1,7 @@
 // 密接/次密接追踪（传染病类型差异化）+ 暴露餐次(食源) + 环境消除(环境污染)
 App.modules.contacts = {
   async render(root, params) {
-    App.setTitle('类型包扩展');
+    App.setTitle('密接追踪与流调扩展');
     root.innerHTML = '';
     const page = App.h('div', { class: 'page' });
     root.appendChild(page);
@@ -15,7 +15,7 @@ App.modules.contacts = {
     // 头部 + 事件选择
     page.appendChild(App.h('div', { class: 'card' }, [
       App.h('div', { class: 'flex between items wrap gap' }, [
-        App.h('div', { class: 'section-title', style: 'margin:0' }, [App.h('span', { class: 'bar' }), '类型包差异化扩展']),
+        App.h('div', { class: 'section-title', style: 'margin:0' }, [App.h('span', { class: 'bar' }), `密接追踪与流调扩展（${(e.typeName || '')}）`]),
         (() => {
           const sel = App.h('select', { id: 'ct_event', style: 'width:auto', onchange: ev => App.go('contacts', { eventId: ev.target.value }) });
           active.forEach(x => sel.appendChild(App.h('option', { value: x.id, selected: x.id === eventId ? '' : null }, [x.title])));
@@ -128,7 +128,7 @@ App.modules.contacts = {
   async toCase(id) {
     if (!confirm('确认该密接转确诊？将自动生成新病例。')) return;
     const r = await App.api.post('/extensions/contacts/' + id + '/to-case');
-    if (r && r.data) { App.toast('已转确诊: ' + r.data.case.trackNo); App.go('contacts', {}); }
+    if (r) { App.toast('已转确诊: ' + (r.case ? r.case.trackNo : '')); App.go('contacts', {}); }
   },
 
   /* ========== 暴露餐次 ========== */

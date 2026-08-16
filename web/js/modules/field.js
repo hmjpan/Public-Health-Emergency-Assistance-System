@@ -8,8 +8,28 @@ App.modules.field = {
 
     const events = await App.api.get('/dispatch/events');
     const active = (events || []).filter(e => e.status !== 'closed');
-    if (!active.length) { page.appendChild(App.h('div', { class: 'empty' }, ['当前无在办事件'])); return; }
-    const e = active.find(x => x.id === params.eventId) || active.find(x => x.stage === 'field') || active[0];
+    if (!active.length) {
+      page.appendChild(App.h('div', { class: 'empty' }, ['当前无在办事件']));
+      page.appendChild(App.h('div', { class: 'empty-cta' }, [
+        ['commander', 'deputy'].includes(App.user.role) ? App.h('button', { class: 'primary', onclick: () => App.go('dispatch') }, ['🚨 去一键启动']) : null,
+        App.h('button', { onclick: () => App.go('drill') }, ['🎬 或进入演练模式'])
+      ].filter(Boolean)));
+      return;
+    }
+    // 指定了事件但不在"现场处置"阶段时给出提示，避免跳错事件
+    let e = active.find(x => x.id === params.eventId);
+    if (!e) {
+      if (params.eventId) {
+        const tgt = (events || []).find(x => x.id === params.eventId);
+        page.appendChild(App.h('div', { class: 'empty' }, [`事件「${tgt ? tgt.title : params.eventId}」尚未进入现场处置阶段，当前处于「${tgt ? tgt.stageName : ''}」`]));
+        page.appendChild(App.h('div', { class: 'empty-cta' }, [
+          tgt && tgt.stage === 'responding' ? App.h('button', { class: 'primary', onclick: () => App.go('response', { eventId: tgt.id }) }, ['前往响应启动阶段 ->']) : null,
+          tgt ? App.h('button', { onclick: () => this.render(document.getElementById('content'), {}) }, ['查看当前在办事件']) : null
+        ].filter(Boolean)));
+        return;
+      }
+      e = active.find(x => x.stage === 'field') || active[0];
+    }
 
     // 流程定位：当前环节
     page.appendChild(App.stepper(e.stage));
@@ -24,22 +44,38 @@ App.modules.field = {
           return sel;
         })()
       ]),
-      App.h('div', { class: 'muted', style: 'margin-top:6px' }, [`现场指挥员: ${e.fieldCommanderId ? '已指定' : '未指定'} · 阶段: ${e.stageName}`])
+      App.h('div', { class: 'muted', style: 'margin-top:6px' }, [`现场指挥员: ${e.fieldCommanderName || (e.fieldCommanderId ? '已指定' : '未指定')} · 阶段: ${e.stageName}`])
     ]));
 
-    // 操作栏
+    // 操作栏（主次分明：一线常用为主操作，指挥/管理收进"更多"）
     const isCmd = ['commander', 'deputy'].includes(App.user.role);
-    const bar = App.h('div', { class: 'flex gap wrap', style: 'margin:12px 0' }, [
-      isCmd ? App.h('button', { onclick: () => this.assignCommander(e.id) }, ['指定现场指挥员']) : null,
-      App.h('button', { class: 'primary', onclick: () => this.activateTasks(e.id) }, ['激活任务包并分发']),
-      App.h('button', { onclick: () => this.fillForm(e) }, ['填报表单']),
-      App.h('button', { onclick: () => App.go('medical', { tab: 'cases', eventId: e.id }) }, ['🏥 登记/查看病例']),
-      App.h('button', { onclick: () => this.submitBrief(e.id) }, ['提交简报']),
-      App.h('button', { class: 'danger', onclick: () => this.urgentReport(e.id) }, ['⚠ 紧急上报']),
-      isCmd ? App.h('button', { class: 'primary', onclick: () => this.issueInstruction(e.id) }, ['下达指令']) : null,
-      App.h('button', { onclick: () => this.requestResource(e.id) }, ['资源申请']),
-      isCmd && e.stage === 'field' ? App.h('button', { class: 'success', onclick: () => this.finishField(e.id) }, ['✓ 现场处置完成']) : null
-    ].filter(Boolean));
+    const mainActs = [
+      App.h('button', { class: 'primary', onclick: () => this.activateTasks(e.id) }, ['⚡ 激活任务包并分发']),
+      App.h('button', { onclick: () => this.fillForm(e) }, ['📋 填报表单']),
+      App.h('button', { onclick: () => App.go('medical', { tab: 'cases', eventId: e.id }) }, ['🏥 登记病例']),
+      App.h('button', { onclick: () => this.submitBrief(e.id) }, ['📝 提交简报']),
+      App.h('button', { class: 'danger', onclick: () => this.urgentReport(e.id) }, ['⚠ 紧急上报'])
+    ];
+    if (isCmd && e.stage === 'field') mainActs.push(App.h('button', { class: 'success', onclick: () => this.finishField(e.id) }, ['✓ 现场处置完成']));
+    const bar = App.h('div', { class: 'flex gap wrap items', style: 'margin:12px 0' }, [...mainActs,
+      // 更多操作（决策/管理类）
+      App.h('div', { class: 'more-wrap' }, [
+        App.h('button', { class: 'more-btn', onclick: ev => {
+          const m = document.querySelector('.more-menu');
+          if (m) m.remove();
+          else {
+            const menu = App.h('div', { class: 'more-menu' }, [
+              isCmd ? App.h('button', { onclick: () => { menu.remove(); this.assignCommander(e.id); } }, ['指定现场指挥员']) : null,
+              isCmd ? App.h('button', { onclick: () => { menu.remove(); this.issueInstruction(e.id); } }, ['下达指令']) : null,
+              App.h('button', { onclick: () => { menu.remove(); this.requestResource(e.id); } }, ['资源申请']),
+              App.h('button', { onclick: () => { menu.remove(); App.go('contacts', { eventId: e.id }); } }, ['密接追踪'])
+            ].filter(Boolean));
+            document.addEventListener('click', function h(e2) { if (!menu.contains(e2.target) && !e2.target.closest('.more-btn')) { menu.remove(); document.removeEventListener('click', h); } });
+            ev.target.parentElement.appendChild(menu);
+          }
+        } }, ['⋯ 更多'])
+      ])
+    ]);
     page.appendChild(bar);
 
     // 现场完成标准（决策层可见）
@@ -288,6 +324,8 @@ App.modules.field = {
     const r = await App.api.req('POST', '/dispatch/events/' + eventId + '/advance');
     if (r === null) return; // 错误已 toast
     App.toast('现场处置完成,事件进入终止评估');
-    App.go('dashboard');
+    // 闭环：直接引导进入复盘整改
+    if (App.user.nav.includes('review')) App.go('review');
+    else App.go('dashboard');
   }
 };
