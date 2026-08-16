@@ -1,6 +1,6 @@
 # 卫盾Agent — 突发公共卫生事件多Agent协同应急处置平台
 
-> GOAI 新智基座 Agent Infra · 7 Agent · 12 Skill · 188测试全绿
+> GOAI 新智基座 Agent Infra · 7 Agent · 12 Skill
 
 **一键启动 · 双证据验证 · Guardrail约束 · 法规溯源 · 双模式运行**
 
