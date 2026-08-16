@@ -1,0 +1,20 @@
+卫盾Agent：突发公共卫生事件多部门协同应急处置智能平台
+
+【问题与场景】
+面向卫生系统。突发公共卫生事件时面临：乱（人员思想不统一、各组缺乏协调）、慢（电话逐级通知动辄数小时）、信息不一致（各组碎片化、口径不统一）、能力参差（部分人员无经验不知怎么做）、经验误判（依赖个人经验导致误判）、培训低效（需多人配合演练，周期长效果差，事件来了仍无法统一部署）。
+
+【核心解决方案】
+采用"系统固化流程+大模型扩展能力"双层架构，支持双模式运行。
+系统层：固定人（RBAC权限+强制反馈通知）、物（人员/物资/车辆全生命周期管理）、流程（三阶段状态机+完成标准校验）、信息（Event State共享），确保乱不了、慢不了。
+大模型层：基于AgentTeams框架，7个Agent各配专属Skill——Sentinel配EventClassify（事件分类）、Commander配GradeEvaluate（研判定级）、Dispatch配StaffAssign（编成调度）、Field配SOPGuidance（岗位SOP指引）、Medical配CaseTrack（病例跟踪）、Communication配NotifyDispatch（通知反馈）、Review配ReviewReport（复盘沉淀）。
+双模式运行：辅助处置模式——真人操作，Agent辅助建议，用于实际事件处置；模拟演练模式——Agent充当固定角色，一人即可走完全流程，用于培训练习。
+技术栈：Node.js+Express、原生JS前端、JSON存储、SVG图表库。
+
+【创新点】
+①Agent-Skill一一对应，职责清晰；②双模式运行：处置+演练一体化；③系统+大模型双轨：系统固定流程，大模型扩展能力；④每次可改进：复盘→知识库→Skill迭代。
+
+【开放/复用】
+Agent框架、Skill契约、类型包、双模式机制可开源（MIT），可迁移至安全生产、自然灾害等场景。
+
+【当前进展】
+12个系统模块+Agent/Skill层全部建成。12个Skill（7专属+4共享+1通知），7个Agent，7个MCP工具，113条Agent测试+75条回归测试全绿。AGENTS.md/WORKER.md/SKILL.md标准文档齐全。支持AgentTeams编排+全链路Trace+双模式运行。下一步对接真实大模型。
