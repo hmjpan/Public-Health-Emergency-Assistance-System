@@ -1,0 +1,1946 @@
+[
+  {
+    "id": "ntf_msvoan7ug7118",
+    "eventId": "ev_msvoan7qde2nr",
+    "targetId": "dir_01",
+    "targetName": "张流调",
+    "phone": "13800000011",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoan7u6fy2u",
+      "chn_msvoan8053mji",
+      "chn_msvoan82inujy"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:34.410Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:34.410Z"
+  },
+  {
+    "id": "ntf_msvoan85ytyhs",
+    "eventId": "ev_msvoan7qde2nr",
+    "targetId": "dir_02",
+    "targetName": "孙队员",
+    "phone": "13800000015",
+    "role": "member",
+    "superiorId": "dir_01",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoan85tkuyf",
+      "chn_msvoan87z7wca",
+      "chn_msvoan89f24ub"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:34.421Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:34.421Z"
+  },
+  {
+    "id": "ntf_msvoan8cifqyg",
+    "eventId": "ev_msvoan7qde2nr",
+    "targetId": "dir_03",
+    "targetName": "刘采样",
+    "phone": "13800000012",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoan8ce7c6v",
+      "chn_msvoan8eddpxo",
+      "chn_msvoan8gq549r"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:34.428Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:34.428Z"
+  },
+  {
+    "id": "ntf_msvoan8jr9u0h",
+    "eventId": "ev_msvoan7qde2nr",
+    "targetId": "dir_05",
+    "targetName": "陈消杀",
+    "phone": "13800000013",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoan8jaewga",
+      "chn_msvoan8kmnnco",
+      "chn_msvoan8lsqxp8"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:34.435Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:34.435Z"
+  },
+  {
+    "id": "ntf_msvoan8osmtpf",
+    "eventId": "ev_msvoan7qde2nr",
+    "targetId": "dir_06",
+    "targetName": "赵管控",
+    "phone": "13800000014",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoan8oakfjn",
+      "chn_msvoan8p6it3d",
+      "chn_msvoan8qqslhj"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:34.440Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:34.440Z"
+  },
+  {
+    "id": "ntf_msvoan8taiawj",
+    "eventId": "ev_msvoan7qde2nr",
+    "targetId": "dir_04",
+    "targetName": "钱检验",
+    "phone": "13800000021",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoan8tn90tn",
+      "chn_msvoan8uz2n39",
+      "chn_msvoan8v4e9c6"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:34.445Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:34.445Z"
+  },
+  {
+    "id": "ntf_msvoan8y8jjhh",
+    "eventId": "ev_msvoan7qde2nr",
+    "targetId": "dir_07",
+    "targetName": "何救治",
+    "phone": "13800000022",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoan8yr2inw",
+      "chn_msvoan8zv07uu",
+      "chn_msvoan91v48j8"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:34.450Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:34.450Z"
+  },
+  {
+    "id": "ntf_msvoan93qdl3y",
+    "eventId": "ev_msvoan7qde2nr",
+    "targetId": "dir_09",
+    "targetName": "周物资",
+    "phone": "13800000016",
+    "role": "material_mgr",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoan93a779e",
+      "chn_msvoan94lgn4v",
+      "chn_msvoan965i0rn"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:34.455Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:34.455Z"
+  },
+  {
+    "id": "ntf_msvoan98jgt64",
+    "eventId": "ev_msvoan7qde2nr",
+    "targetId": "dir_10",
+    "targetName": "吴驾驶",
+    "phone": "13800000017",
+    "role": "driver",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoan988aw9e",
+      "chn_msvoan9ai2fwl",
+      "chn_msvoan9b1tll1"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:34.460Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:34.460Z"
+  },
+  {
+    "id": "ntf_msvoany2asap6",
+    "eventId": "ev_msvoanxyitsrm",
+    "targetId": "dir_01",
+    "targetName": "张流调",
+    "phone": "13800000011",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoany2cm8n3",
+      "chn_msvoany4axmgn",
+      "chn_msvoany6ufkfd"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:35.354Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:35.354Z"
+  },
+  {
+    "id": "ntf_msvoanyabszic",
+    "eventId": "ev_msvoanxyitsrm",
+    "targetId": "dir_02",
+    "targetName": "孙队员",
+    "phone": "13800000015",
+    "role": "member",
+    "superiorId": "dir_01",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoanyaxmm3b",
+      "chn_msvoanycn5l9w",
+      "chn_msvoanyepxdjg"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:35.362Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:35.362Z"
+  },
+  {
+    "id": "ntf_msvoanyilejet",
+    "eventId": "ev_msvoanxyitsrm",
+    "targetId": "dir_03",
+    "targetName": "刘采样",
+    "phone": "13800000012",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoanyi332f6",
+      "chn_msvoanyjhl84l",
+      "chn_msvoanyl43b5f"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:35.369Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:35.370Z"
+  },
+  {
+    "id": "ntf_msvoanypn36qq",
+    "eventId": "ev_msvoanxyitsrm",
+    "targetId": "dir_05",
+    "targetName": "陈消杀",
+    "phone": "13800000013",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoanyp82j72",
+      "chn_msvoanyrctll3",
+      "chn_msvoanythuemn"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:35.377Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:35.377Z"
+  },
+  {
+    "id": "ntf_msvoanywpcvcy",
+    "eventId": "ev_msvoanxyitsrm",
+    "targetId": "dir_06",
+    "targetName": "赵管控",
+    "phone": "13800000014",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoanywli3d4",
+      "chn_msvoanyy2iamm",
+      "chn_msvoanz0b1f7a"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:35.384Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:35.384Z"
+  },
+  {
+    "id": "ntf_msvoanz44nfwd",
+    "eventId": "ev_msvoanxyitsrm",
+    "targetId": "dir_04",
+    "targetName": "钱检验",
+    "phone": "13800000021",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoanz40fmyp",
+      "chn_msvoanz6sb013",
+      "chn_msvoanz8qjz82"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:35.392Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:35.392Z"
+  },
+  {
+    "id": "ntf_msvoanzchsoj5",
+    "eventId": "ev_msvoanxyitsrm",
+    "targetId": "dir_07",
+    "targetName": "何救治",
+    "phone": "13800000022",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoanzc6rj9x",
+      "chn_msvoanzeozxzv",
+      "chn_msvoanzfe9ghp"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:35.400Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:35.400Z"
+  },
+  {
+    "id": "ntf_msvoanzjzqyvc",
+    "eventId": "ev_msvoanxyitsrm",
+    "targetId": "dir_09",
+    "targetName": "周物资",
+    "phone": "13800000016",
+    "role": "material_mgr",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoanzj1cn29",
+      "chn_msvoanzkapci0",
+      "chn_msvoanzmhlazd"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:35.407Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:35.407Z"
+  },
+  {
+    "id": "ntf_msvoanzo638yk",
+    "eventId": "ev_msvoanxyitsrm",
+    "targetId": "dir_10",
+    "targetName": "吴驾驶",
+    "phone": "13800000017",
+    "role": "driver",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoanzootgbq",
+      "chn_msvoanzqemy5u",
+      "chn_msvoanzrqqdbl"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:35.412Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:35.412Z"
+  },
+  {
+    "id": "ntf_msvoaskg3cevo",
+    "eventId": "ev_msvoaskclv640",
+    "targetId": "dir_01",
+    "targetName": "张流调",
+    "phone": "13800000011",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoaskglnbfy",
+      "chn_msvoaskjildog",
+      "chn_msvoaskl280c5"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:41.344Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:41.344Z"
+  },
+  {
+    "id": "ntf_msvoaskpv9cl2",
+    "eventId": "ev_msvoaskclv640",
+    "targetId": "dir_02",
+    "targetName": "孙队员",
+    "phone": "13800000015",
+    "role": "member",
+    "superiorId": "dir_01",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoaskpd7wtf",
+      "chn_msvoaskqua8ea",
+      "chn_msvoasksfcbz4"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:41.353Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:41.353Z"
+  },
+  {
+    "id": "ntf_msvoaskwx2x72",
+    "eventId": "ev_msvoaskclv640",
+    "targetId": "dir_03",
+    "targetName": "刘采样",
+    "phone": "13800000012",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoaskwfftg4",
+      "chn_msvoaskysurjg",
+      "chn_msvoasl0z9ens"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:41.360Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:41.360Z"
+  },
+  {
+    "id": "ntf_msvoasl3hvl93",
+    "eventId": "ev_msvoaskclv640",
+    "targetId": "dir_05",
+    "targetName": "陈消杀",
+    "phone": "13800000013",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoasl32f0ag",
+      "chn_msvoasl4w0t0l",
+      "chn_msvoasl6iiacf"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:41.367Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:41.367Z"
+  },
+  {
+    "id": "ntf_msvoasl9dfxip",
+    "eventId": "ev_msvoaskclv640",
+    "targetId": "dir_06",
+    "targetName": "赵管控",
+    "phone": "13800000014",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoasl9bgu2p",
+      "chn_msvoasla2pktn",
+      "chn_msvoaslbwc445"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:41.373Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:41.373Z"
+  },
+  {
+    "id": "ntf_msvoaslegde22",
+    "eventId": "ev_msvoaskclv640",
+    "targetId": "dir_04",
+    "targetName": "钱检验",
+    "phone": "13800000021",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoasle88bit",
+      "chn_msvoaslg90fgu",
+      "chn_msvoasliqsv2x"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:41.378Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:41.378Z"
+  },
+  {
+    "id": "ntf_msvoaslk0bzap",
+    "eventId": "ev_msvoaskclv640",
+    "targetId": "dir_07",
+    "targetName": "何救治",
+    "phone": "13800000022",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoaslka7n80",
+      "chn_msvoaslmnqlid",
+      "chn_msvoasln7q0oc"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:41.384Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:41.384Z"
+  },
+  {
+    "id": "ntf_msvoaslqgs341",
+    "eventId": "ev_msvoaskclv640",
+    "targetId": "dir_09",
+    "targetName": "周物资",
+    "phone": "13800000016",
+    "role": "material_mgr",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoaslqzm3f8",
+      "chn_msvoasls7dbok",
+      "chn_msvoasltlwkwc"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:41.390Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:41.390Z"
+  },
+  {
+    "id": "ntf_msvoaslxo6705",
+    "eventId": "ev_msvoaskclv640",
+    "targetId": "dir_10",
+    "targetName": "吴驾驶",
+    "phone": "13800000017",
+    "role": "driver",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoaslxyni20",
+      "chn_msvoaslyd1sxb",
+      "chn_msvoasm0f9p02"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:41.397Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:41.397Z"
+  },
+  {
+    "id": "ntf_msvoat4ugi3rz",
+    "eventId": "ev_msvoat4qpa286",
+    "targetId": "dir_01",
+    "targetName": "张流调",
+    "phone": "13800000011",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoat4ulwm9t",
+      "chn_msvoat4w9gx2g",
+      "chn_msvoat4zl6te3"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:42.078Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:42.078Z"
+  },
+  {
+    "id": "ntf_msvoat52xw23j",
+    "eventId": "ev_msvoat4qpa286",
+    "targetId": "dir_02",
+    "targetName": "孙队员",
+    "phone": "13800000015",
+    "role": "member",
+    "superiorId": "dir_01",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoat52foea1",
+      "chn_msvoat53ieuyq",
+      "chn_msvoat55n9fty"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:42.086Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:42.086Z"
+  },
+  {
+    "id": "ntf_msvoat58x9hni",
+    "eventId": "ev_msvoat4qpa286",
+    "targetId": "dir_03",
+    "targetName": "刘采样",
+    "phone": "13800000012",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoat58h0pq3",
+      "chn_msvoat59991pe",
+      "chn_msvoat5bee68i"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:42.092Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:42.092Z"
+  },
+  {
+    "id": "ntf_msvoat5ejiu2u",
+    "eventId": "ev_msvoat4qpa286",
+    "targetId": "dir_05",
+    "targetName": "陈消杀",
+    "phone": "13800000013",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoat5e34vwm",
+      "chn_msvoat5f9nu40",
+      "chn_msvoat5hzokz8"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:42.098Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:42.098Z"
+  },
+  {
+    "id": "ntf_msvoat5keovw8",
+    "eventId": "ev_msvoat4qpa286",
+    "targetId": "dir_06",
+    "targetName": "赵管控",
+    "phone": "13800000014",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoat5kiwaa5",
+      "chn_msvoat5ljy894",
+      "chn_msvoat5nb0p6i"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:42.104Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:42.104Z"
+  },
+  {
+    "id": "ntf_msvoat5qmcb8t",
+    "eventId": "ev_msvoat4qpa286",
+    "targetId": "dir_04",
+    "targetName": "钱检验",
+    "phone": "13800000021",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoat5qtx0gx",
+      "chn_msvoat5r9mp1s",
+      "chn_msvoat5ti0gth"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:42.110Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:42.110Z"
+  },
+  {
+    "id": "ntf_msvoat5wlp6r0",
+    "eventId": "ev_msvoat4qpa286",
+    "targetId": "dir_07",
+    "targetName": "何救治",
+    "phone": "13800000022",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoat5woet09",
+      "chn_msvoat5y1ibl1",
+      "chn_msvoat5zqqivy"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:42.116Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:42.116Z"
+  },
+  {
+    "id": "ntf_msvoat62u5sjn",
+    "eventId": "ev_msvoat4qpa286",
+    "targetId": "dir_09",
+    "targetName": "周物资",
+    "phone": "13800000016",
+    "role": "material_mgr",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoat625f2ec",
+      "chn_msvoat64oxwtc",
+      "chn_msvoat660lb7o"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:42.122Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:42.122Z"
+  },
+  {
+    "id": "ntf_msvoat69pjbn4",
+    "eventId": "ev_msvoat4qpa286",
+    "targetId": "dir_10",
+    "targetName": "吴驾驶",
+    "phone": "13800000017",
+    "role": "driver",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoat6980l9y",
+      "chn_msvoat6axd8k5",
+      "chn_msvoat6c7sxe0"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:42.129Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:42.129Z"
+  },
+  {
+    "id": "ntf_msvoatd4vcv92",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_01",
+    "targetName": "张流调",
+    "phone": "13800000011",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoatd4nbtsg",
+      "chn_msvoatd5z0akb",
+      "chn_msvoatd7e0qff"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:42.376Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:42.376Z"
+  },
+  {
+    "id": "ntf_msvoatdajn29g",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_02",
+    "targetName": "孙队员",
+    "phone": "13800000015",
+    "role": "member",
+    "superiorId": "dir_01",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoatdauu1o0",
+      "chn_msvoatdckata0",
+      "chn_msvoatdexsdmr"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:42.382Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:42.382Z"
+  },
+  {
+    "id": "ntf_msvoatdhurpke",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_03",
+    "targetName": "刘采样",
+    "phone": "13800000012",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoatdhmrhxd",
+      "chn_msvoatdioc07g",
+      "chn_msvoatdknhk0w"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:42.389Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:42.389Z"
+  },
+  {
+    "id": "ntf_msvoatdnh7hh3",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_05",
+    "targetName": "陈消杀",
+    "phone": "13800000013",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoatdnxiuxt",
+      "chn_msvoatdqiu4gu",
+      "chn_msvoatdrnwkya"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:42.395Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:42.395Z"
+  },
+  {
+    "id": "ntf_msvoatduf26xn",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_06",
+    "targetName": "赵管控",
+    "phone": "13800000014",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoatduo82on",
+      "chn_msvoatdwwf4x2",
+      "chn_msvoatdydtmd7"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:42.402Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:42.402Z"
+  },
+  {
+    "id": "ntf_msvoate1yyxug",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_04",
+    "targetName": "钱检验",
+    "phone": "13800000021",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoate19k9t2",
+      "chn_msvoate29ql3u",
+      "chn_msvoate5j2jpn"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:42.409Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:42.409Z"
+  },
+  {
+    "id": "ntf_msvoate8yw821",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_07",
+    "targetName": "何救治",
+    "phone": "13800000022",
+    "role": "group_leader",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoate89wu61",
+      "chn_msvoateaq91o0",
+      "chn_msvoatebexa8o"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:42.416Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:42.416Z"
+  },
+  {
+    "id": "ntf_msvoateewil3f",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_09",
+    "targetName": "周物资",
+    "phone": "13800000016",
+    "role": "material_mgr",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoateehwva5",
+      "chn_msvoategbx2d4",
+      "chn_msvoateixzbmx"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:42.422Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:42.422Z"
+  },
+  {
+    "id": "ntf_msvoatelsaoz9",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_10",
+    "targetName": "吴驾驶",
+    "phone": "13800000017",
+    "role": "driver",
+    "superiorId": "u_commander",
+    "content": "【演练通知】【演练】社区传染病疫情处置演练。情景:某社区发现2例不明原因肺炎病例，疑似人传人，需快速启动响应、流调溯源、密接管控、医疗救治全流程。首批任务:核实病例、划定疫点、启动流调与密接排查、准备采样与消杀",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvoatels4380",
+      "chn_msvoaten0mws0",
+      "chn_msvoatepitv0p"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T10:44:42.429Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T10:39:42.429Z"
+  },
+  {
+    "id": "ntf_msvpnrjpcgue6",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_01",
+    "targetName": "张流调",
+    "phone": "13800000011",
+    "role": "group_leader",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvpnrjpk70ld",
+      "chn_msvpnrjse4ezi",
+      "chn_msvpnrjvnep89"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:22:46.165Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:17:46.165Z"
+  },
+  {
+    "id": "ntf_msvpnrk0evpp7",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_02",
+    "targetName": "孙队员",
+    "phone": "13800000015",
+    "role": "member",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvpnrk08oek1",
+      "chn_msvpnrk3winsj",
+      "chn_msvpnrk647k6h"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:22:46.176Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:17:46.176Z"
+  },
+  {
+    "id": "ntf_msvpnrkac561r",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_03",
+    "targetName": "刘采样",
+    "phone": "13800000012",
+    "role": "group_leader",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvpnrkarrhti",
+      "chn_msvpnrkc68qfn",
+      "chn_msvpnrkf0mazl"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:22:46.186Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:17:46.186Z"
+  },
+  {
+    "id": "ntf_msvpnrklvsix5",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_05",
+    "targetName": "陈消杀",
+    "phone": "13800000013",
+    "role": "group_leader",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvpnrklnpd11",
+      "chn_msvpnrkopo3ad",
+      "chn_msvpnrkq7qyl7"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:22:46.197Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:17:46.197Z"
+  },
+  {
+    "id": "ntf_msvpnrkvclnla",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_06",
+    "targetName": "赵管控",
+    "phone": "13800000014",
+    "role": "group_leader",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvpnrkvwlatc",
+      "chn_msvpnrky73w1c",
+      "chn_msvpnrl1foh0g"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:22:46.207Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:17:46.207Z"
+  },
+  {
+    "id": "ntf_msvpnrl5sam7u",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_04",
+    "targetName": "钱检验",
+    "phone": "13800000021",
+    "role": "group_leader",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvpnrl5t8sl6",
+      "chn_msvpnrl81wl0g",
+      "chn_msvpnrlbr49d1"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:22:46.217Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:17:46.217Z"
+  },
+  {
+    "id": "ntf_msvpnrlh5cfzh",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_07",
+    "targetName": "何救治",
+    "phone": "13800000022",
+    "role": "group_leader",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvpnrlh8b4mm",
+      "chn_msvpnrlkpn93v",
+      "chn_msvpnrln240of"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:22:46.229Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:17:46.229Z"
+  },
+  {
+    "id": "ntf_msvpnrlrwwyp5",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_09",
+    "targetName": "周物资",
+    "phone": "13800000016",
+    "role": "material_mgr",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvpnrlrmcabq",
+      "chn_msvpnrlv3or6q",
+      "chn_msvpnrlzo45ju"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:22:46.239Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:17:46.239Z"
+  },
+  {
+    "id": "ntf_msvpnrm4akise",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_10",
+    "targetName": "吴驾驶",
+    "phone": "13800000017",
+    "role": "driver",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvpnrm4id13i",
+      "chn_msvpnrm60b4s1",
+      "chn_msvpnrm9ln675"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:22:46.252Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:17:46.252Z"
+  },
+  {
+    "id": "ntf_msvq8l70dgsdg",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_01",
+    "targetName": "张流调",
+    "phone": "13800000011",
+    "role": "group_leader",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvq8l70djcc3",
+      "chn_msvq8l73ucjsl",
+      "chn_msvq8l76fnjqq"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:38:57.708Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:33:57.708Z"
+  },
+  {
+    "id": "ntf_msvq8l7cpb5r2",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_02",
+    "targetName": "孙队员",
+    "phone": "13800000015",
+    "role": "member",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvq8l7cnew06",
+      "chn_msvq8l7fi4tys",
+      "chn_msvq8l7hykea4"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:38:57.720Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:33:57.720Z"
+  },
+  {
+    "id": "ntf_msvq8l7mjleqw",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_03",
+    "targetName": "刘采样",
+    "phone": "13800000012",
+    "role": "group_leader",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvq8l7mcalfl",
+      "chn_msvq8l7oaewxq",
+      "chn_msvq8l7r1pw7o"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:38:57.730Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:33:57.730Z"
+  },
+  {
+    "id": "ntf_msvq8l7vh2025",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_05",
+    "targetName": "陈消杀",
+    "phone": "13800000013",
+    "role": "group_leader",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvq8l7vylv5f",
+      "chn_msvq8l7y732hz",
+      "chn_msvq8l81aj7f7"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:38:57.739Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:33:57.739Z"
+  },
+  {
+    "id": "ntf_msvq8l85fz3hu",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_06",
+    "targetName": "赵管控",
+    "phone": "13800000014",
+    "role": "group_leader",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvq8l8534vvu",
+      "chn_msvq8l88g9mo1",
+      "chn_msvq8l8bhwopz"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:38:57.749Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:33:57.749Z"
+  },
+  {
+    "id": "ntf_msvq8l8fsw45i",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_04",
+    "targetName": "钱检验",
+    "phone": "13800000021",
+    "role": "group_leader",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvq8l8f1oldb",
+      "chn_msvq8l8ixazhf",
+      "chn_msvq8l8ks2psf"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:38:57.759Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:33:57.759Z"
+  },
+  {
+    "id": "ntf_msvq8l8p4ybe9",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_07",
+    "targetName": "何救治",
+    "phone": "13800000022",
+    "role": "group_leader",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvq8l8p6il0u",
+      "chn_msvq8l8s1hrjl",
+      "chn_msvq8l8uoxfap"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:38:57.769Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:33:57.769Z"
+  },
+  {
+    "id": "ntf_msvq8l8zul2u5",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_09",
+    "targetName": "周物资",
+    "phone": "13800000016",
+    "role": "material_mgr",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvq8l8zmugfd",
+      "chn_msvq8l92ijyrz",
+      "chn_msvq8l960o6vl"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:38:57.779Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:33:57.779Z"
+  },
+  {
+    "id": "ntf_msvq8l9by0hrr",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_10",
+    "targetName": "吴驾驶",
+    "phone": "13800000017",
+    "role": "driver",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvq8l9brzucf",
+      "chn_msvq8l9es92ya",
+      "chn_msvq8l9hatpjw"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:38:57.791Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:33:57.791Z"
+  },
+  {
+    "id": "ntf_msvqdtmb53obb",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_01",
+    "targetName": "张流调",
+    "phone": "13800000011",
+    "role": "group_leader",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvqdtmb04q2m",
+      "chn_msvqdtmfd1nse",
+      "chn_msvqdtmjn8h1o"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:43:01.907Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:38:01.907Z"
+  },
+  {
+    "id": "ntf_msvqdtmo8cmhl",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_02",
+    "targetName": "孙队员",
+    "phone": "13800000015",
+    "role": "member",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvqdtmorl0ve",
+      "chn_msvqdtmsfily1",
+      "chn_msvqdtmv3dh8i"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:43:01.920Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:38:01.920Z"
+  },
+  {
+    "id": "ntf_msvqdtn0rism7",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_03",
+    "targetName": "刘采样",
+    "phone": "13800000012",
+    "role": "group_leader",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvqdtn0045v9",
+      "chn_msvqdtn3iwlbp",
+      "chn_msvqdtn8y1t1a"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:43:01.932Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:38:01.932Z"
+  },
+  {
+    "id": "ntf_msvqdtndd0cm8",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_05",
+    "targetName": "陈消杀",
+    "phone": "13800000013",
+    "role": "group_leader",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvqdtndxufea",
+      "chn_msvqdtngxaecl",
+      "chn_msvqdtnk23x16"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:43:01.945Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:38:01.945Z"
+  },
+  {
+    "id": "ntf_msvqdtnphl64n",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_06",
+    "targetName": "赵管控",
+    "phone": "13800000014",
+    "role": "group_leader",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvqdtnph8opv",
+      "chn_msvqdtntmmtoz",
+      "chn_msvqdtnwy263y"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:43:01.957Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:38:01.957Z"
+  },
+  {
+    "id": "ntf_msvqdto1skc5o",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_04",
+    "targetName": "钱检验",
+    "phone": "13800000021",
+    "role": "group_leader",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvqdto10ie84",
+      "chn_msvqdto4i04nu",
+      "chn_msvqdto74ctij"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:43:01.969Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:38:01.969Z"
+  },
+  {
+    "id": "ntf_msvqdtocperi6",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_07",
+    "targetName": "何救治",
+    "phone": "13800000022",
+    "role": "group_leader",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvqdtoc7ohnv",
+      "chn_msvqdtofbt7s4",
+      "chn_msvqdtoj9ml9u"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:43:01.980Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:38:01.980Z"
+  },
+  {
+    "id": "ntf_msvqdtooawgh4",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_09",
+    "targetName": "周物资",
+    "phone": "13800000016",
+    "role": "material_mgr",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvqdtoorcmot",
+      "chn_msvqdtos9ri1k",
+      "chn_msvqdtovieywo"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:43:01.992Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:38:01.992Z"
+  },
+  {
+    "id": "ntf_msvqdtp0508lf",
+    "eventId": "ev_msvoatd17ldsj",
+    "targetId": "dir_10",
+    "targetName": "吴驾驶",
+    "phone": "13800000017",
+    "role": "driver",
+    "superiorId": null,
+    "content": "【Agent协同通知】【演练】社区传染病疫情处置演练 @11 需协同处置",
+    "channels": [
+      "voice",
+      "sms",
+      "app"
+    ],
+    "channelLogs": [
+      "chn_msvqdtp08ofi0",
+      "chn_msvqdtp4c3rk0",
+      "chn_msvqdtp7yl1sn"
+    ],
+    "status": "escalated",
+    "ackAt": null,
+    "ackDeadline": "2026-08-16T11:43:02.004Z",
+    "escalateLevel": 1,
+    "kind": "alert",
+    "refId": null,
+    "sentAt": "2026-08-16T11:38:02.004Z"
+  }
+]

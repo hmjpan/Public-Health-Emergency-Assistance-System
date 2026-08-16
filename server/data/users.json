@@ -1,0 +1,17 @@
+[
+  { "id": "u_commander", "username": "commander", "password": "123456", "name": "王指挥", "role": "commander", "dept": "应急指挥中心", "group": "决策层", "phone": "13800000001" },
+  { "id": "u_deputy", "username": "deputy", "password": "123456", "name": "李副指挥", "role": "deputy", "dept": "应急指挥中心", "group": "决策层", "phone": "13800000002" },
+  { "id": "u_liudiao", "username": "liudiao", "password": "123456", "name": "张流调", "role": "group_leader", "dept": "传染病防制科", "group": "流调组", "phone": "13800000011" },
+  { "id": "u_caiyang", "username": "caiyang", "password": "123456", "name": "刘采样", "role": "group_leader", "dept": "检验科", "group": "采样组", "phone": "13800000012" },
+  { "id": "u_xiaosha", "username": "xiaosha", "password": "123456", "name": "陈消杀", "role": "group_leader", "dept": "消毒科", "group": "消杀组", "phone": "13800000013" },
+  { "id": "u_guankong", "username": "guankong", "password": "123456", "name": "赵管控", "role": "group_leader", "dept": "监督科", "group": "管控组", "phone": "13800000014" },
+  { "id": "u_member", "username": "member", "password": "123456", "name": "孙队员", "role": "member", "dept": "传染病防制科", "group": "流调组", "phone": "13800000015" },
+  { "id": "u_wuzi", "username": "wuzi", "password": "123456", "name": "周物资", "role": "material_mgr", "dept": "后勤保障科", "group": "物资保障组", "phone": "13800000016" },
+  { "id": "u_medic", "username": "medic", "password": "123456", "name": "何救治", "role": "medic", "dept": "医疗救治组", "group": "医疗救治组", "phone": "13800000022" },
+  { "id": "u_spokesman", "username": "spokesman", "password": "123456", "name": "林宣教", "role": "spokesman", "dept": "健康宣教组", "group": "宣教组", "phone": "13800000023" },
+  { "id": "u_reviewer", "username": "reviewer", "password": "123456", "name": "苏复盘", "role": "reviewer", "dept": "综合评估科", "group": "评估组", "phone": "13800000024" },
+  { "id": "u_drill", "username": "drill", "password": "123456", "name": "杜演练", "role": "drill_mgr", "dept": "应急办", "group": "演练组", "phone": "13800000025" },
+  { "id": "u_siji", "username": "siji", "password": "123456", "name": "吴驾驶", "role": "driver", "dept": "后勤保障科", "group": "车辆保障组", "phone": "13800000017" },
+  { "id": "u_info", "username": "info", "password": "123456", "name": "郑信息", "role": "info", "dept": "综合信息科", "group": "信息组", "phone": "13800000018" },
+  { "id": "u_admin", "username": "admin", "password": "123456", "name": "系统管理员", "role": "admin", "dept": "信息中心", "group": "管理组", "phone": "13800000019" }
+]

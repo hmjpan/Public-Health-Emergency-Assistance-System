@@ -1,0 +1,200 @@
+{
+  "rule_version": "2026.3",
+  "note": "事件分级判定规则表（D0）。依据《中华人民共和国突发公共卫生事件应对法》(2025)、《国家突发公共卫生事件应急预案》(国办函〔2006〕39号)第1.3条分级标准、《突发公共卫生事件应急条例》(国务院令第376号)第19-20条、《中华人民共和国传染病防治法》(2025修订)、《食物中毒事故处理办法》(卫生部令第9号)第5条整理。expr 为受限表达式，变量见 variables；命中多条取最高级（就高不就低）。",
+  "legal_basis": [
+    "《中华人民共和国突发公共卫生事件应对法》2025年9月12日通过，2025年11月1日施行（核心上位法）",
+    "《中华人民共和国传染病防治法》2025年4月30日第二次修订，2025年9月1日施行",
+    "《中华人民共和国突发事件应对法》2024年6月28日修订，2024年11月1日施行",
+    "《国家突发公共卫生事件应急预案》国办函〔2006〕39号 第1.3条 分级标准",
+    "《突发公共卫生事件应急条例》国务院令第376号 第19-20条",
+    "《食物中毒事故处理办法》卫生部令第9号"
+  ],
+  "risk_levels": {
+    "I级": { "riskLevel": "L0", "label": "特别重大", "color": "#d32f2f", "response": "国务院统一指挥，省级政府启动Ⅰ级响应" },
+    "II级": { "riskLevel": "L1", "label": "重大", "color": "#f57c00", "response": "省级卫生行政部门统一指挥，启动Ⅱ级响应" },
+    "III级": { "riskLevel": "L2", "label": "较大", "color": "#fbc02d", "response": "市(地)级政府启动Ⅲ级响应" },
+    "IV级": { "riskLevel": "L3", "label": "一般", "color": "#388e3c", "response": "县(区)级政府启动Ⅳ级响应" }
+  },
+  "variables": {
+    "cases": "病例/中毒人数（整数≥0）",
+    "deaths": "死亡人数（整数≥0）",
+    "scope": "波及范围: 1=县区内, 2=市内跨区, 3=省内跨市, 4=跨省",
+    "spread": "是否有扩散趋势(true/false)",
+    "typeTag": "传染病管理类别标签: '甲类管理'|'乙类管理'|'丙类管理'|''",
+    "clusterType": "聚集场所类型: school|hospital|community|factory|other"
+  },
+  "rules": [
+    {
+      "id": "GRD-INF-001", "typeKey": "INF",
+      "expr": "cases >= 1 && typeTag == '甲类管理'",
+      "level": "I级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.1: 肺鼠疫、肺炭疽在大、中城市发生，或甲类传染病在有扩散趋势时",
+      "legal_ref": "国办函〔2006〕39号 1.3.1",
+      "riskLevel": "L0"
+    },
+    {
+      "id": "GRD-INF-002", "typeKey": "INF",
+      "expr": "cases >= 1 && spread == true",
+      "level": "I级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.1: 发生传染病并有扩散趋势，波及多省",
+      "legal_ref": "国办函〔2006〕39号 1.3.1",
+      "riskLevel": "L0"
+    },
+    {
+      "id": "GRD-INF-003", "typeKey": "INF",
+      "expr": "cases >= 1 && scope >= 3",
+      "level": "II级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.2: 涉及多个地市，或省级以上卫生行政部门认定的较大传染病疫情",
+      "legal_ref": "国办函〔2006〕39号 1.3.2",
+      "riskLevel": "L1"
+    },
+    {
+      "id": "GRD-INF-004", "typeKey": "INF",
+      "expr": "cases >= 1 && scope == 2",
+      "level": "III级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.3: 本市内跨区发生，或市级以上卫生行政部门认定",
+      "legal_ref": "国办函〔2006〕39号 1.3.3",
+      "riskLevel": "L2"
+    },
+    {
+      "id": "GRD-INF-005", "typeKey": "INF",
+      "expr": "cases >= 1",
+      "level": "IV级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.4: 县区内发生，或县级卫生行政部门认定",
+      "legal_ref": "国办函〔2006〕39号 1.3.4",
+      "riskLevel": "L3"
+    },
+
+    {
+      "id": "GRD-FOOD-001", "typeKey": "FOOD",
+      "expr": "cases > 100 && deaths >= 10",
+      "level": "I级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.1: 一次食物中毒人数超过100人并出现死亡病例（死亡≥10人），或出现特别重大影响",
+      "legal_ref": "国办函〔2006〕39号 1.3.1 / 卫生部令第9号第5条",
+      "riskLevel": "L0"
+    },
+    {
+      "id": "GRD-FOOD-002", "typeKey": "FOOD",
+      "expr": "cases > 100 || deaths >= 3",
+      "level": "II级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.2: 一次食物中毒人数超过100人，或出现死亡病例（死亡≥3人）",
+      "legal_ref": "国办函〔2006〕39号 1.3.2",
+      "riskLevel": "L1"
+    },
+    {
+      "id": "GRD-FOOD-003", "typeKey": "FOOD",
+      "expr": "cases > 50 || deaths >= 1",
+      "level": "III级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.3: 一次食物中毒人数超过50人，或出现死亡病例",
+      "legal_ref": "国办函〔2006〕39号 1.3.3",
+      "riskLevel": "L2"
+    },
+    {
+      "id": "GRD-FOOD-004", "typeKey": "FOOD",
+      "expr": "cases >= 10",
+      "level": "IV级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.4: 一次食物中毒人数10-49人，未出现死亡病例",
+      "legal_ref": "国办函〔2006〕39号 1.3.4",
+      "riskLevel": "L3"
+    },
+
+    {
+      "id": "GRD-ENV-001", "typeKey": "ENV",
+      "expr": "scope >= 4 || deaths >= 30",
+      "level": "I级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.1: 跨省域环境污染，或一次事件伤亡30人以上（含死亡）",
+      "legal_ref": "国办函〔2006〕39号 1.3.1",
+      "riskLevel": "L0"
+    },
+    {
+      "id": "GRD-ENV-002", "typeKey": "ENV",
+      "expr": "scope == 3 || deaths >= 10",
+      "level": "II级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.2: 跨市域环境污染致大规模健康损害，或死亡≥10人",
+      "legal_ref": "国办函〔2006〕39号 1.3.2",
+      "riskLevel": "L1"
+    },
+    {
+      "id": "GRD-ENV-003", "typeKey": "ENV",
+      "expr": "scope == 2 || cases >= 30",
+      "level": "III级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.3: 局部环境污染超标导致集中发病≥30人，或市内跨区影响",
+      "legal_ref": "国办函〔2006〕39号 1.3.3",
+      "riskLevel": "L2"
+    },
+    {
+      "id": "GRD-ENV-004", "typeKey": "ENV",
+      "expr": "cases >= 3",
+      "level": "IV级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.4: 局部少量人员出现健康不适，3人以上",
+      "legal_ref": "国办函〔2006〕39号 1.3.4",
+      "riskLevel": "L3"
+    },
+
+    {
+      "id": "GRD-POISON-001", "typeKey": "POISON",
+      "expr": "cases > 50 || deaths >= 5",
+      "level": "I级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.1: 急性职业中毒>50人，或死亡≥5人",
+      "legal_ref": "国办函〔2006〕39号 1.3.1",
+      "riskLevel": "L0"
+    },
+    {
+      "id": "GRD-POISON-002", "typeKey": "POISON",
+      "expr": "cases >= 30 || deaths >= 3",
+      "level": "II级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.2: 急性职业中毒30-49人，或死亡≥3人",
+      "legal_ref": "国办函〔2006〕39号 1.3.2",
+      "riskLevel": "L1"
+    },
+    {
+      "id": "GRD-POISON-003", "typeKey": "POISON",
+      "expr": "cases >= 10 || deaths >= 1",
+      "level": "III级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.3: 急性职业中毒10-29人，或死亡1-2人",
+      "legal_ref": "国办函〔2006〕39号 1.3.3",
+      "riskLevel": "L2"
+    },
+    {
+      "id": "GRD-POISON-004", "typeKey": "POISON",
+      "expr": "cases >= 3",
+      "level": "IV级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.4: 急性职业中毒<10人且无死亡",
+      "legal_ref": "国办函〔2006〕39号 1.3.4",
+      "riskLevel": "L3"
+    },
+
+    {
+      "id": "GRD-UNK-001", "typeKey": "UNK",
+      "expr": "scope >= 4 || spread == true",
+      "level": "I级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.1: 涉及多省或有扩散趋势的群体性不明原因疾病",
+      "legal_ref": "国办函〔2006〕39号 1.3.1",
+      "riskLevel": "L0"
+    },
+    {
+      "id": "GRD-UNK-002", "typeKey": "UNK",
+      "expr": "scope == 3",
+      "level": "II级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.2: 涉及省内多个地市的群体性不明原因疾病",
+      "legal_ref": "国办函〔2006〕39号 1.3.2",
+      "riskLevel": "L1"
+    },
+    {
+      "id": "GRD-UNK-003", "typeKey": "UNK",
+      "expr": "scope == 2 || cases >= 20",
+      "level": "III级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.3: 本市内跨区发生或病例≥20人的群体性不明原因疾病",
+      "legal_ref": "国办函〔2006〕39号 1.3.3",
+      "riskLevel": "L2"
+    },
+    {
+      "id": "GRD-UNK-004", "typeKey": "UNK",
+      "expr": "cases >= 5",
+      "level": "IV级",
+      "basis": "《国家突发公共卫生事件应急预案》1.3.4: 县区内发生的群体性不明原因疾病，≥5人",
+      "legal_ref": "国办函〔2006〕39号 1.3.4",
+      "riskLevel": "L3"
+    }
+  ]
+}
