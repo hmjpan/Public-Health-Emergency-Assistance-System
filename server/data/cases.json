@@ -1,0 +1,92 @@
+[
+  {
+    "id": "case_msvvy2awqhwd7",
+    "trackNo": "CASE-20260816-0001",
+    "eventId": "ev_msvoatd17ldsj",
+    "name": "���",
+    "gender": "Ů",
+    "age": 34,
+    "idCard": "",
+    "phone": "",
+    "address": "�����ֵ��Ҹ���С��3��",
+    "onsetAt": null,
+    "confirmAt": "2026-08-16T14:13:44.360Z",
+    "severity": "critical",
+    "status": "pending_transfer",
+    "statusHistory": [
+      {
+        "status": "pending_transfer",
+        "at": "2026-08-16T14:13:44.360Z",
+        "by": "王指挥",
+        "note": "病例登记"
+      }
+    ],
+    "hospitalId": null,
+    "isolationType": "none",
+    "sourceCaseId": null,
+    "outcome": null,
+    "createdAt": "2026-08-16T14:13:44.360Z",
+    "updatedAt": "2026-08-16T14:13:44.360Z",
+    "createdBy": "王指挥"
+  },
+  {
+    "id": "case_msvvy2fcifbxh",
+    "trackNo": "CASE-20260816-0002",
+    "eventId": "ev_msvoatd17ldsj",
+    "name": "������",
+    "gender": "��",
+    "age": 51,
+    "idCard": "",
+    "phone": "",
+    "address": "÷����ֵ����Է12��",
+    "onsetAt": null,
+    "confirmAt": "2026-08-16T14:13:44.520Z",
+    "severity": "severe",
+    "status": "pending_transfer",
+    "statusHistory": [
+      {
+        "status": "pending_transfer",
+        "at": "2026-08-16T14:13:44.520Z",
+        "by": "王指挥",
+        "note": "病例登记"
+      }
+    ],
+    "hospitalId": null,
+    "isolationType": "none",
+    "sourceCaseId": null,
+    "outcome": null,
+    "createdAt": "2026-08-16T14:13:44.520Z",
+    "updatedAt": "2026-08-16T14:13:44.520Z",
+    "createdBy": "王指挥"
+  },
+  {
+    "id": "case_msvvy2jnm0by1",
+    "trackNo": "CASE-20260816-0003",
+    "eventId": "ev_msvoatd17ldsj",
+    "name": "�Բ���",
+    "gender": "��",
+    "age": 28,
+    "idCard": "",
+    "phone": "",
+    "address": "�����ݽֵ��������B��",
+    "onsetAt": null,
+    "confirmAt": "2026-08-16T14:13:44.675Z",
+    "severity": "mild",
+    "status": "pending_transfer",
+    "statusHistory": [
+      {
+        "status": "pending_transfer",
+        "at": "2026-08-16T14:13:44.675Z",
+        "by": "王指挥",
+        "note": "病例登记"
+      }
+    ],
+    "hospitalId": null,
+    "isolationType": "none",
+    "sourceCaseId": null,
+    "outcome": null,
+    "createdAt": "2026-08-16T14:13:44.675Z",
+    "updatedAt": "2026-08-16T14:13:44.675Z",
+    "createdBy": "王指挥"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "hos_01",
+    "name": "市人民医院(定点)",
+    "level": "三级",
+    "designated": true,
+    "contact": "陈院长",
+    "phone": "0571-88000001",
+    "bedTotal": 200,
+    "bedOccupied": 150,
+    "bedReserve": 30,
+    "icuTotal": 20,
+    "icuOccupied": 18,
+    "staffOnDuty": 120,
+    "staffAvailable": 45,
+    "updatedAt": "2026-07-23T08:00:00.000Z"
+  },
+  {
+    "id": "hos_02",
+    "name": "市传染病医院(定点)",
+    "level": "三级",
+    "designated": true,
+    "contact": "刘院长",
+    "phone": "0571-88000002",
+    "bedTotal": 150,
+    "bedOccupied": 90,
+    "bedReserve": 20,
+    "icuTotal": 15,
+    "icuOccupied": 8,
+    "staffOnDuty": 90,
+    "staffAvailable": 30,
+    "updatedAt": "2026-07-23T08:00:00.000Z"
+  },
+  {
+    "id": "hos_03",
+    "name": "中心医院(后备)",
+    "level": "二级",
+    "designated": true,
+    "contact": "王院长",
+    "phone": "0571-88000003",
+    "bedTotal": 100,
+    "bedOccupied": 60,
+    "bedReserve": 10,
+    "icuTotal": 8,
+    "icuOccupied": 5,
+    "staffOnDuty": 60,
+    "staffAvailable": 20,
+    "updatedAt": "2026-07-23T13:11:24.738Z"
+  }
+]
