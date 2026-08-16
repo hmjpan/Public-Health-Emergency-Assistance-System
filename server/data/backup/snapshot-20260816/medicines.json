@@ -1,8 +1,0 @@
-[
-  { "id": "med_01", "hospitalId": "hos_01", "name": "抗病毒口服液", "stock": 500, "dailyUse": 80, "threshold": 3, "updatedAt": "2026-07-23T08:00:00.000Z" },
-  { "id": "med_02", "hospitalId": "hos_01", "name": "退烧药", "stock": 800, "dailyUse": 100, "threshold": 3, "updatedAt": "2026-07-23T08:00:00.000Z" },
-  { "id": "med_03", "hospitalId": "hos_01", "name": "抗生素", "stock": 200, "dailyUse": 90, "threshold": 3, "updatedAt": "2026-07-23T08:00:00.000Z" },
-  { "id": "med_04", "hospitalId": "hos_02", "name": "抗病毒口服液", "stock": 400, "dailyUse": 50, "threshold": 3, "updatedAt": "2026-07-23T08:00:00.000Z" },
-  { "id": "med_05", "hospitalId": "hos_02", "name": "补液盐", "stock": 600, "dailyUse": 60, "threshold": 3, "updatedAt": "2026-07-23T08:00:00.000Z" },
-  { "id": "med_06", "hospitalId": "hos_03", "name": "补液盐", "stock": 150, "dailyUse": 70, "threshold": 3, "updatedAt": "2026-07-23T08:00:00.000Z" }
-]
